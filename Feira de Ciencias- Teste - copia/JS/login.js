@@ -64,8 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarMensagem(mensagemSucesso, "Logado com sucesso!", "sucesso");
     form.reset();
 
+    // 🔹 Redireciona para o Cardápio após login
     setTimeout(() => {
-      window.location.href = "SiteHome.html";
+      window.location.href = "Cardapio.html";
     }, 1000);
   });
 });

@@ -307,3 +307,9 @@ html, body {
 .instagram-link:hover {
   color: #E4405F;
 }
+.CardapioSeletor {
+  background-color: #ff8400;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
