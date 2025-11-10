@@ -1,0 +1,179 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+.JaTemUmaConta {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.CorRequerida {
+  color: red;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url(../IMAGENS/Design\ sem\ nome.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+.container {
+  background-color: orange;
+  width: 90%;
+  max-width: 400px;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.TextoCadastroH2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.mensagem {
+  position: fixed;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  padding: 12px 15px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+.mensagem.ativa {
+  top: 20px;
+  opacity: 1;
+}
+
+.erro {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.sucesso {
+  background-color: #7fff9d;
+  color: #155724;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+input::placeholder {
+  color: #aaa;
+  transition: color 0.3s;
+}
+
+input:hover::placeholder {
+  color: transparent;
+}
+
+/* 🔹 Ícone do olho (mostrar/ocultar senha) */
+.toggle-senha {
+  position: absolute;
+  right: 10px;
+  top: 32px;
+  width: 16px;
+  height: 16px;
+  background: url(../IMAGENS/olho.png) no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  display: none; /* começa invisível */
+}
+
+.toggle-senha:hover {
+  opacity: 1;
+}
+
+.toggle-senha:focus {
+  outline: none;
+}
+
+/* Estado ativo (quando a senha está visível) */
+.toggle-senha.ativo {
+  filter: brightness(0.7);
+}
+
+button {
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 10px 36px 10px 10px;
+  }
+
+  .TextoCadastroH2 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
