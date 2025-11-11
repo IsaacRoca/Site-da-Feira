@@ -112,7 +112,6 @@ input:hover::placeholder {
   color: transparent;
 }
 
-/* 🔹 Ícone de mostrar senha */
 .toggle-senha {
   position: absolute;
   right: 10px;

@@ -19,14 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (toggleSenha && campoSenha) {
-    // Mostrar/ocultar senha
     toggleSenha.addEventListener("click", () => {
       const tipo = campoSenha.getAttribute("type") === "password" ? "text" : "password";
       campoSenha.setAttribute("type", tipo);
       toggleSenha.classList.toggle("ativo");
     });
 
-    // Exibir o olho apenas quando o usuário começar a digitar
     campoSenha.addEventListener("input", () => {
       toggleSenha.style.opacity = campoSenha.value.length > 0 ? "1" : "0";
     });
@@ -64,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarMensagem(mensagemSucesso, "Logado com sucesso!", "sucesso");
     form.reset();
 
-    // 🔹 Redireciona para o Cardápio após login
     setTimeout(() => {
       window.location.href = "Cardapio.html";
     }, 1000);

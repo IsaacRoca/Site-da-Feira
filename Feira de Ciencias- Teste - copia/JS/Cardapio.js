@@ -6,65 +6,75 @@ document.addEventListener("DOMContentLoaded", () => {
   ajusteMenuPorTamanho();
   configurarLinks();
 
-  // 🔹 Sistema de exibição do cardápio do dia selecionado
-  const inputData = document.getElementById("dataCardapio");
-  const cardSelecionado = document.getElementById("cardapio-dia-selecionado");
-  const tituloDia = document.getElementById("tituloDia");
-  const descricaoDia = document.getElementById("descricaoDia");
-  const imagemDia = document.getElementById("imagemDia");
+  const botaoAbrirPopup = document.getElementById("abrirPopup");
+  const popup = document.getElementById("popup");
+  const botaoFecharPopup = document.getElementById("fecharPopup");
+  const modal = document.getElementById("modal");
+  const fecharModal = document.getElementById("fecharModal");
+  const imagemModal = document.getElementById("imagemModal");
+  const tituloModal = document.getElementById("tituloModal");
+  const descricaoModal = document.getElementById("descricaoModal");
 
-  if (inputData) {
-    const cardapios = {
-      1: {
-        titulo: "Segunda-feira",
-        descricao: "Macarrão à bolonhesa, arroz branco, feijão preto, salada verde e suco de laranja natural.",
-        imagem: "../IMAGENS/Imagem 2.jpeg",
-      },
-      2: {
-        titulo: "Terça-feira",
-        descricao: "Frango assado, arroz integral, feijão carioca, legumes cozidos e suco de uva.",
-        imagem: "../IMAGENS/imagem 3.jpg",
-      },
-      3: {
-        titulo: "Quarta-feira",
-        descricao: "Carne moída, arroz branco, feijão preto, purê de batata e refresco de maracujá.",
-        imagem: "../IMAGENS/imagem 4.jpeg",
-      },
-      4: {
-        titulo: "Quinta-feira",
-        descricao: "Peixe grelhado, arroz com legumes, feijão carioca, salada de tomate e suco de limão.",
-        imagem: "../IMAGENS/imagem 3.jpg",
-      },
-      5: {
-        titulo: "Sexta-feira",
-        descricao: "Estrogonofe de carne, arroz branco, batata palha, feijão e suco de abacaxi.",
-        imagem: "../IMAGENS/Imagem 2.jpeg",
-      },
-    };
+  const cardapios = {
+    1: {
+      titulo: "Segunda-feira",
+      descricao: "Macarrão à bolonhesa, arroz branco, feijão preto, salada verde e suco de laranja natural.",
+      imagem: "../IMAGENS/Imagem 2.jpeg",
+    },
+    2: {
+      titulo: "Terça-feira",
+      descricao: "Frango assado, arroz integral, feijão carioca, legumes cozidos e suco de uva.",
+      imagem: "../IMAGENS/imagem 3.jpg",
+    },
+    3: {
+      titulo: "Quarta-feira",
+      descricao: "Carne moída, arroz branco, feijão preto, purê de batata e refresco de maracujá.",
+      imagem: "../IMAGENS/imagem 4.jpeg",
+    },
+    4: {
+      titulo: "Quinta-feira",
+      descricao: "Peixe grelhado, arroz com legumes, feijão carioca, salada de tomate e suco de limão.",
+      imagem: "../IMAGENS/imagem 3.jpg",
+    },
+    5: {
+      titulo: "Sexta-feira",
+      descricao: "Estrogonofe de carne, arroz branco, batata palha, feijão e suco de abacaxi.",
+      imagem: "../IMAGENS/Imagem 2.jpeg",
+    },
+  };
 
-    inputData.addEventListener("change", () => {
-      const dataSelecionada = new Date(inputData.value + "T00:00");
-      const diaSemana = dataSelecionada.getDay(); // 0=Domingo, 1=Segunda, ..., 6=Sábado
+  botaoAbrirPopup.addEventListener("click", () => {
+    popup.style.display = "flex";
+  });
 
-      if (diaSemana >= 1 && diaSemana <= 5) {
-        const card = cardapios[diaSemana];
-        tituloDia.textContent = `${card.titulo} (${dataSelecionada.toLocaleDateString("pt-BR")})`;
-        descricaoDia.textContent = card.descricao;
-        imagemDia.src = card.imagem;
-        imagemDia.alt = `Imagem do cardápio de ${card.titulo}`;
-        cardSelecionado.style.display = "block";
-      } else {
-        tituloDia.textContent = "Dia sem cardápio disponível";
-        descricaoDia.textContent = "Selecione uma data entre segunda e sexta-feira.";
-        imagemDia.src = "../IMAGENS/imagem 3.jpg";
-        imagemDia.alt = "Dia sem cardápio";
-        cardSelecionado.style.display = "block";
-      }
+  botaoFecharPopup.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  document.querySelectorAll(".dias-calendario button").forEach((botao) => {
+    botao.addEventListener("click", () => {
+      const dia = parseInt(botao.dataset.dia);
+      const card = cardapios[dia];
+      tituloModal.textContent = card.titulo;
+      descricaoModal.textContent = card.descricao;
+      imagemModal.src = card.imagem;
+
+      popup.style.display = "none";
+      modal.style.display = "flex";
     });
-  }
+  });
+
+  fecharModal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 });
 
-// =================== FUNÇÕES ORIGINAIS ===================
 
 function configurarLinks() {
   const linkInicio = document.querySelector('a[href="#inicio"]');
