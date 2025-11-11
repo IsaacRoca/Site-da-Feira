@@ -8,24 +8,17 @@
   <script defer src="../JS/Cardapio.js"></script>
 
   <meta name="description" content="O cardápio do dia a dia dos alunos do CCM Tancredo de Almeida Neves, informações e eventos">
-  <meta property="og:title" content="O cardápio dos alunos do CCM">
-  <meta property="og:description" content="Veja qual será o próximo prato servido no CCM Tancredo de Almeida Neves, junto com informações de eventos escolares!">
-  <meta property="og:type" content="website">
-
   <link rel="icon" href="../IMAGENS/colegio-estadual-civico-militar-tancredo-de-almeida-neves.png" type="image/x-icon">
 </head>
 
 <body>
-  <div id="mensagemBoasVindas" class="mensagem" aria-live="polite"></div>
-
-  <header class="header" role="banner">
-    <nav class="header-content" role="navigation" aria-label="Menu principal">
-      <div class="nav-links" role="menubar">
-        <a href="#inicio" class="nav-link" role="menuitem">INÍCIO</a>
-        <a href="#cardapio" class="nav-link" role="menuitem">CARDÁPIO</a>
-        <a href="#eventos" class="nav-link" role="menuitem">EVENTOS</a>
+  <header class="header">
+    <nav class="header-content">
+      <div class="nav-links">
+        <a href="#inicio" class="nav-link">INÍCIO</a>
+        <a href="#cardapio" class="nav-link">CARDÁPIO</a>
+        <a href="#eventos" class="nav-link">EVENTOS</a>
       </div>
-
       <div class="perfil-container" aria-haspopup="true" aria-owns="perfil-dropdown">
         <button class="perfil-icon" id="perfilIcon" aria-expanded="false" aria-controls="perfil-dropdown" title="Perfil">
           <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Perfil" width="22" height="22">
@@ -41,81 +34,86 @@
 
   <section class="hero-section">
     <div class="hero-content centralizado">
-      <h1 class="cardapio-titulo">Cardápio semanal</h1>
-      <h3>Selecione o dia de hoje</h3>
-      <input type="date" class="CardapioSeletor">
-      
+      <h1 class="cardapio-titulo">Cardápio Semanal</h1>
+      <h3>Selecione o prato desejado!</h3>
+      <button class="btn-seletor-dia" id="abrirPopup">Selecione a data</button>
+
       <div class="cards-container">
         <div class="card">
-          <div class="card-imagem">
-            <img src="../IMAGENS/Imagem 2.jpeg" alt="Prato de comida">
-          </div>
+          <div class="card-imagem"><img src="../IMAGENS/Imagem 2.jpeg" alt="Segunda"></div>
           <div class="card-conteudo">
-            <h3 class="card-titulo">Segunda-feira</h3>
-            <p class="card-descricao">Macarrão à bolonhesa, arroz branco, feijão preto, salada verde e suco de laranja natural.</p>
+            <h3>Segunda-feira</h3>
+            <p>Macarrão à bolonhesa, arroz branco, feijão preto, salada verde e suco de laranja natural.</p>
           </div>
         </div>
 
         <div class="card">
-          <div class="card-imagem">
-            <img src="../IMAGENS/imagem 3.jpg" alt="Padrão de alimentos">
-          </div>
+          <div class="card-imagem"><img src="../IMAGENS/imagem 3.jpg" alt="Terça"></div>
           <div class="card-conteudo">
-            <h3 class="card-titulo">Terça-feira</h3>
-            <p class="card-descricao">Frango assado, arroz integral, feijão carioca, legumes cozidos e suco de uva.</p>
+            <h3>Terça-feira</h3>
+            <p>Frango assado, arroz integral, feijão carioca, legumes cozidos e suco de uva.</p>
           </div>
         </div>
 
         <div class="card">
-          <div class="card-imagem">
-            <img src="../IMAGENS/imagem 4.jpeg" alt="Fundo com frutas">
-          </div>
+          <div class="card-imagem"><img src="../IMAGENS/imagem 4.jpeg" alt="Quarta"></div>
           <div class="card-conteudo">
-            <h3 class="card-titulo">Quarta-feira</h3>
-            <p class="card-descricao">Carne moída, arroz branco, feijão preto, purê de batata e refresco de maracujá.</p>
+            <h3>Quarta-feira</h3>
+            <p>Carne moída, arroz branco, feijão preto, purê de batata e refresco de maracujá.</p>
           </div>
         </div>
 
         <div class="card">
-          <div class="card-imagem">
-            <img src="../IMAGENS/imagem 3.jpg" alt="Prato típico brasileiro">
-          </div>
+          <div class="card-imagem"><img src="../IMAGENS/imagem 3.jpg" alt="Quinta"></div>
           <div class="card-conteudo">
-            <h3 class="card-titulo">Quinta-feira</h3>
-            <p class="card-descricao">Peixe grelhado, arroz com legumes, feijão carioca, salada de tomate e suco de limão.</p>
+            <h3>Quinta-feira</h3>
+            <p>Peixe grelhado, arroz com legumes, feijão carioca, salada de tomate e suco de limão.</p>
           </div>
         </div>
 
         <div class="card">
-          <div class="card-imagem">
-            <img src="../IMAGENS/Imagem 2.jpeg" alt="Logo CCM">
-          </div>
+          <div class="card-imagem"><img src="../IMAGENS/Imagem 2.jpeg" alt="Sexta"></div>
           <div class="card-conteudo">
-            <h3 class="card-titulo">Sexta-feira</h3>
-            <p class="card-descricao">Estrogonofe de carne, arroz branco, batata palha, feijão e suco de abacaxi.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-imagem">
-            <img src="../IMAGENS/imagem 3.jpg" alt="Padrão de alimentos">
-          </div>
-          <div class="card-conteudo">
-            <h3 class="card-titulo">Sobremesa Especial</h3>
-            <p class="card-descricao">Toda sexta-feira: frutas da estação, gelatina colorida ou pudim de leite.</p>
+            <h3>Sexta-feira</h3>
+            <p>Estrogonofe de carne, arroz branco, batata palha, feijão e suco de abacaxi.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <div class="popup-overlay" id="popup">
+    <div class="popup-content">
+      <h2>Escolha o dia da semana</h2>
+      <div class="dias-calendario">
+        <button data-dia="1">Segunda</button>
+        <button data-dia="2">Terça</button>
+        <button data-dia="3">Quarta</button>
+        <button data-dia="4">Quinta</button>
+        <button data-dia="5">Sexta</button>
+      </div>
+      <button id="fecharPopup" class="fechar-popup">Fechar</button>
+    </div>
+  </div>
 
-  <section class="container-mencoes">
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <button class="fechar-modal" id="fecharModal">❌</button>
+      <div class="card">
+        <div class="card-imagem">
+          <img id="imagemModal" src="" alt="">
+        </div>
+        <div class="card-conteudo">
+          <h3 id="tituloModal" class="card-titulo"></h3>
+          <p id="descricaoModal" class="card-descricao"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="container-mencoes fade-in">
     <div class="coluna">
       <h3 class="titulo-coluna">Desenvolvido por</h3>
       <div class="linha-horizontal-mencoes"></div>
-      <p class="texto-coluna">
-        2°DS
-      </p>
+      <p class="texto-coluna">2°DS</p>
     </div>
 
     <div class="coluna">
