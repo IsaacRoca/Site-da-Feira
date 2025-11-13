@@ -1,0 +1,157 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio - CCM Tancredo de Almeida Neves</title>
+  <link rel="stylesheet" href="../CSS/Cardapio.css">
+  <script defer src="../JS/Cardapio.js"></script>
+  <meta name="description" content="O cardápio do dia a dia dos alunos do CCM Tancredo de Almeida Neves, informações e eventos">
+  <link rel="icon" href="../IMAGENS/colegio-estadual-civico-militar-tancredo-de-almeida-neves.png" type="image/x-icon">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="header-content">
+      <div class="nav-links">
+        <a href="#cardapio" class="nav-link">CARDÁPIO</a>
+        <a href="#eventos" class="nav-link">EVENTOS</a>
+      </div>
+      <div class="perfil-container" aria-haspopup="true" aria-owns="perfil-dropdown">
+        <button class="perfil-icon" id="perfilIcon" aria-expanded="false" aria-controls="perfil-dropdown" title="Perfil">
+          <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Perfil" width="22" height="22">
+        </button>
+
+        <div class="dropdown" id="perfil-dropdown" role="menu" aria-hidden="true">
+          <h3 id="nomeUsuario">Usuário</h3>
+          <div id="encerrarSessao" role="menuitem" tabindex="0">Encerrar Sessão</div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-content centralizado">
+      <h1 class="cardapio-titulo">Cardápio Semanal</h1>
+      <h3>Selecione o prato desejado!</h3>
+      <button class="btn-seletor-dia" id="abrirPopup">Selecione a data</button>
+
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-imagem"><img src="../IMAGENS/Imagem 2.jpeg" alt="Segunda"></div>
+          <div class="card-conteudo">
+            <h3>Segunda-feira</h3>
+            <p>Macarrão à bolonhesa, arroz branco, feijão preto, salada verde e suco de laranja natural.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-imagem"><img src="../IMAGENS/imagem 3.jpg" alt="Terça"></div>
+          <div class="card-conteudo">
+            <h3>Terça-feira</h3>
+            <p>Frango assado, arroz integral, feijão carioca, legumes cozidos e suco de uva.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-imagem"><img src="../IMAGENS/imagem 4.jpeg" alt="Quarta"></div>
+          <div class="card-conteudo">
+            <h3>Quarta-feira</h3>
+            <p>Carne moída, arroz branco, feijão preto, purê de batata e refresco de maracujá.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-imagem"><img src="../IMAGENS/imagem 3.jpg" alt="Quinta"></div>
+          <div class="card-conteudo">
+            <h3>Quinta-feira</h3>
+            <p>Peixe grelhado, arroz com legumes, feijão carioca, salada de tomate e suco de limão.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-imagem"><img src="../IMAGENS/Imagem 2.jpeg" alt="Sexta"></div>
+          <div class="card-conteudo">
+            <h3>Sexta-feira</h3>
+            <p>Estrogonofe de carne, arroz branco, batata palha, feijão e suco de abacaxi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPUP DE SELEÇÃO DE DIA -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-content">
+      <h2>Escolha o dia da semana</h2>
+      <div class="dias-calendario">
+        <button data-dia="1">Segunda</button>
+        <button data-dia="2">Terça</button>
+        <button data-dia="3">Quarta</button>
+        <button data-dia="4">Quinta</button>
+        <button data-dia="5">Sexta</button>
+      </div>
+      <button id="fecharPopup" class="fechar-popup">Fechar</button>
+    </div>
+  </div>
+
+  <!-- MODAL DO PRATO -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content horizontal-modal">
+      <button class="fechar-modal" id="fecharModal">❌</button>
+
+      <div class="modal-esquerda">
+        <div class="card">
+          <div class="card-imagem">
+            <img id="imagemModal" src="" alt="">
+          </div>
+          <div class="card-conteudo">
+            <h3 id="tituloModal" class="card-titulo"></h3>
+            <p id="descricaoModal" class="card-descricao"></p>
+            <h4 id="subtituloModal"></h4>
+            <div class="modal-colunas">
+            <div id="coluna1Modal" class="coluna-modal"></div>
+            <div id="coluna2Modal" class="coluna-modal"></div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-direita">
+        <h3 class="subtitulo-info">Informações nutricionais</h3>
+        <div class="info-duas-colunas">
+          <div class="coluna-info">
+            <h4>Lorem</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis felis euismod, malesuada justo non, tincidunt sem.</p>
+          </div>
+          <div class="coluna-info">
+            <h4>Lorem</h4>
+            <p>Curabitur ac orci eu massa posuere dictum. Integer tempor, nunc nec laoreet malesuada, ligula est vulputate nulla.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="container-mencoes fade-in">
+    <div class="coluna">
+      <h3 class="titulo-coluna">Desenvolvido por</h3>
+      <div class="linha-horizontal-mencoes"></div>
+      <p class="texto-coluna">2°DS</p>
+    </div>
+
+    <div class="coluna">
+      <h3 class="titulo-coluna">Redes Sociais</h3>
+      <div class="linha-horizontal"></div>
+      <a href="https://www.instagram.com/2ds.tancredo?igsh=MWUzejhiY2RncGk0eQ==" target="_blank" class="instagram-link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm8 2a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1a.75.75 0 0 1 .75-.75Zm-4 2.25A4.75 4.75 0 1 1 7 12.5a4.75 4.75 0 0 1 4.75-4.75Zm0 1.5A3.25 3.25 0 1 0 15.25 12.5 3.25 3.25 0 0 0 11.75 9.25Z"/>
+        </svg>
+        Instagram
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>
