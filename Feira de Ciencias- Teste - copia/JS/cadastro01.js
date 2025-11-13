@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleSenha = document.getElementById("eye-senha");
   const toggleConfirmar = document.getElementById("eye-confirmar");
 
-  // Mostrar/ocultar senha
   if (toggleSenha && senhaInput) {
     toggleSenha.addEventListener("click", () => {
       const tipo = senhaInput.getAttribute("type") === "password" ? "text" : "password";
@@ -33,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Envio do formulário
   if (!form) return;
 
   form.addEventListener("submit", (e) => {
@@ -76,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Função universal para exibir mensagens
 function mostrarMensagem(elemento, texto, tipo) {
   elemento.textContent = texto;
   elemento.classList.remove("sucesso", "erro", "ativa");

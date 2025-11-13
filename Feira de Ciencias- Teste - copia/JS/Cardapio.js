@@ -15,12 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const tituloModal = document.getElementById("tituloModal");
   const descricaoModal = document.getElementById("descricaoModal");
 
-  // 🟢 NOVO: Subtítulo e colunas no modal
   const subtituloModal = document.getElementById("subtituloModal");
   const coluna1Modal = document.getElementById("coluna1Modal");
   const coluna2Modal = document.getElementById("coluna2Modal");
 
-  // 🟢 Agora cada card tem título, descrição, imagem e informações nutricionais personalizadas
   const cardapios = {
     1: {
       titulo: "Segunda-feira",
@@ -64,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  // --- POPUP SELEÇÃO DE DIA ---
   botaoAbrirPopup.addEventListener("click", () => {
     popup.style.display = "flex";
   });
@@ -73,7 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
     popup.style.display = "none";
   });
 
-  // --- CLICOU NUM DIA DO POPUP ---
   document.querySelectorAll(".dias-calendario button").forEach((botao) => {
     botao.addEventListener("click", () => {
       const dia = parseInt(botao.dataset.dia);
@@ -82,13 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- FUNÇÃO GERAL DE ABRIR MODAL ---
   function abrirModalComCardapio(card) {
     tituloModal.textContent = card.titulo;
     descricaoModal.textContent = card.descricao;
     imagemModal.src = card.imagem;
 
-    // 🟢 Atualiza o subtítulo e as colunas (novas)
     subtituloModal.textContent = card.subtitulo;
     coluna1Modal.innerHTML = card.coluna1;
     coluna2Modal.innerHTML = card.coluna2;
@@ -96,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.style.display = "flex";
   }
 
-  // --- FECHAR MODAL ---
   fecharModal.addEventListener("click", () => {
     modal.style.display = "none";
   });
@@ -107,7 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // --- CLICOU EM ALGUM CARD FIXO ---
   const cardsFixos = document.querySelectorAll(".cards-container .card");
   cardsFixos.forEach((card, index) => {
     card.addEventListener("click", () => {
@@ -118,7 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// ---------------- FUNÇÕES EXISTENTES ----------------
 
 function configurarLinks() {
   const linkInicio = document.querySelector('a[href="#inicio"]');

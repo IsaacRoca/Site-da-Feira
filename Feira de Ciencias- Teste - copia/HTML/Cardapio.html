@@ -11,24 +11,33 @@
 </head>
 
 <body>
-  <header class="header">
-    <nav class="header-content">
-      <div class="nav-links">
-        <a href="#cardapio" class="nav-link">CARDÁPIO</a>
-        <a href="#eventos" class="nav-link">EVENTOS</a>
-      </div>
-      <div class="perfil-container" aria-haspopup="true" aria-owns="perfil-dropdown">
-        <button class="perfil-icon" id="perfilIcon" aria-expanded="false" aria-controls="perfil-dropdown" title="Perfil">
-          <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Perfil" width="22" height="22">
-        </button>
+<header class="header">
+  <nav class="header-content">
 
-        <div class="dropdown" id="perfil-dropdown" role="menu" aria-hidden="true">
-          <h3 id="nomeUsuario">Usuário</h3>
-          <div id="encerrarSessao" role="menuitem" tabindex="0">Encerrar Sessão</div>
-        </div>
+    <div class="logo-container">
+      <img src="../IMAGENS/logo CCM.png" 
+           alt="Logo CCM Tancredo de Almeida Neves" 
+           class="logo-img">
+    </div>
+
+    <div class="nav-links">
+      <a href="#cardapio" class="nav-link">CARDÁPIO</a>
+      <a href="#eventos" class="nav-link">EVENTOS</a>
+    </div>
+
+    <div class="perfil-container" aria-haspopup="true" aria-owns="perfil-dropdown">
+      <button class="perfil-icon" id="perfilIcon" aria-expanded="false" aria-controls="perfil-dropdown" title="Perfil">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" 
+             alt="Perfil" width="22" height="22">
+      </button>
+
+      <div class="dropdown" id="perfil-dropdown" role="menu" aria-hidden="true">
+        <h3 id="nomeUsuario">Usuário</h3>
+        <div id="encerrarSessao" role="menuitem" tabindex="0">Encerrar Sessão</div>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
   <section class="hero-section">
     <div class="hero-content centralizado">
@@ -80,7 +89,6 @@
     </div>
   </section>
 
-  <!-- POPUP DE SELEÇÃO DE DIA -->
   <div class="popup-overlay" id="popup">
     <div class="popup-content">
       <h2>Escolha o dia da semana</h2>
@@ -95,7 +103,6 @@
     </div>
   </div>
 
-  <!-- MODAL DO PRATO -->
   <div class="modal-overlay" id="modal">
     <div class="modal-content horizontal-modal">
       <button class="fechar-modal" id="fecharModal">❌</button>
@@ -110,10 +117,9 @@
             <p id="descricaoModal" class="card-descricao"></p>
             <h4 id="subtituloModal"></h4>
             <div class="modal-colunas">
-            <div id="coluna1Modal" class="coluna-modal"></div>
-            <div id="coluna2Modal" class="coluna-modal"></div>
-          </div>
-
+              <div id="coluna1Modal" class="coluna-modal"></div>
+              <div id="coluna2Modal" class="coluna-modal"></div>
+            </div>
           </div>
         </div>
       </div>

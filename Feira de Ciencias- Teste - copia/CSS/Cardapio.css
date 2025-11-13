@@ -19,7 +19,7 @@ html, body {
   left: 0;
   width: 100%;
   background: hsl(0, 0%, 10%);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 999;
 }
 
@@ -32,6 +32,20 @@ html, body {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px; 
+}
+
+.logo-img {
+  height: 48px;       
+  width: auto;        
+  object-fit: contain; 
+  border-radius: 6px;  
 }
 
 .nav-links {
@@ -151,7 +165,6 @@ html, body {
   background-color: rgba(255,255,255,0.05);
 }
 
-/* ========================= HERO SECTION ========================= */
 .hero-section {
   background: rgb(255, 132, 0);
   min-height: calc(100vh - 64px);
@@ -181,7 +194,6 @@ html, body {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
-/* ========================= CARDS ========================= */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -238,7 +250,6 @@ html, body {
   line-height: 1.6;
 }
 
-/* ========================= POPUP ========================= */
 .popup-overlay {
   position: fixed;
   top: 0; left: 0;
@@ -296,7 +307,6 @@ html, body {
   background-color: #807f7f;
 }
 
-/* ========================= MODAL ========================= */
 .modal-overlay {
   position: fixed;
   top: 0; left: 0;
@@ -320,7 +330,6 @@ html, body {
   animation: slideUp 0.4s ease;
 }
 
-/* --- Novo layout horizontal do modal --- */
 .horizontal-modal {
   display: flex;
   flex-direction: row;
@@ -366,7 +375,6 @@ html, body {
   color: #444;
 }
 
-/* Botão fechar */
 .fechar-modal {
   position: absolute;
   top: 10px; right: 10px;
@@ -378,7 +386,6 @@ html, body {
 }
 .fechar-modal:hover { color: #000; }
 
-/* ========================= ANIMAÇÕES ========================= */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -389,7 +396,6 @@ html, body {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* ========================= RESPONSIVIDADE ========================= */
 @media (max-width: 900px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
@@ -414,7 +420,6 @@ html, body {
   }
 }
 
-/* ========================= FOOTER ========================= */
 .container-mencoes {
   background-color: #f8f8f8;
   display: flex;
