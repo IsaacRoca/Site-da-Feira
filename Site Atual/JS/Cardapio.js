@@ -443,30 +443,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (tituloEl) tituloEl.textContent = dados.titulo || "";
       if (descEl) descEl.textContent = dados.descricao || "";
 
-      // garantir área de colunas (vamos remover qualquer .card-nutri antigo e recriar)
-      let cont = cardEl.querySelector(".card-nutri");
-      if (cont) cont.remove();
-
-      const novo = document.createElement("div");
-      novo.className = "card-nutri";
-      // 5 linhas, uma por baixo da outra
-      const linhas = [
-        dados.coluna1 || "",
-        dados.coluna2 || "",
-        dados.coluna3 || "",
-        dados.coluna4 || "",
-        dados.coluna5 || ""
-      ];
-      linhas.forEach(text => {
-        const l = document.createElement("div");
-        l.className = "card-nutri-line";
-        l.innerHTML = text || "&nbsp;"; // evita sumir a linha se vazia
-        novo.appendChild(l);
-      });
-
-      const cardConteudo = cardEl.querySelector(".card-conteudo");
-      if (cardConteudo) cardConteudo.appendChild(novo);
-
       // clique no card fixo abre modal com os dados correspondentes
       cardEl.addEventListener("click", () => {
         abrirModalComCardapio(dados);
