@@ -524,20 +524,22 @@ html, body {
 }
 
 /* COLUNAS DO MODAL */
+/* COLUNAS DO MODAL — AGORA EM COLUNA (UMA EMBAIXO DA OUTRA) */
 .modal-colunas {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
     margin-top: 15px;
 }
 
+/* ITENS DO MODAL — VIRAM TEXTO SIMPLES, SEM CARTÃO */
 .coluna-modal {
-    background: #fff;
-    border: 2px solid #c9c9c9;
-    padding: 10px;
-    border-radius: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
     text-align: left;
-    font-size: 0.9rem;
-    min-height: 60px;
-    white-space: pre-wrap;
+    font-size: 1rem;
+    white-space: normal;
 }

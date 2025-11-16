@@ -95,10 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //   imagem: "../IMAGENS/natal.jpg",
     //   subtitulo: "Informações Nutricionais",
     //   coluna1: "Proteínas: xx",
-    //   coluna2: "Calorias: xx",
-    //   coluna3: "Carboidratos: xx",
-    //   coluna4: "Gorduras: xx",
-    //   coluna5: "Fibras: xx"
+    //  
     // }
   };
 
