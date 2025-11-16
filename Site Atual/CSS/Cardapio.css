@@ -215,7 +215,7 @@ html, body {
     max-width: 1100px;
     width: 100%;
     padding: 0 1rem;
-    align-items: start; /* adicionado */
+    align-items: start;
 }
 
 .card {
@@ -283,7 +283,6 @@ html, body {
     min-height: 55px;
     white-space: pre-wrap;
 }
-
 /* POPUP */
 .popup-overlay {
     position: fixed;
@@ -410,6 +409,7 @@ html, body {
 .fechar-modal:hover {
     color: #000;
 }
+
 .container-mencoes {
     background-color: #0b0142;
     display: flex;
@@ -523,8 +523,6 @@ html, body {
     animation: modalZoomOut 0.35s ease forwards;
 }
 
-/* COLUNAS DO MODAL */
-/* COLUNAS DO MODAL — AGORA EM COLUNA (UMA EMBAIXO DA OUTRA) */
 .modal-colunas {
     display: flex;
     flex-direction: column;
@@ -542,4 +540,151 @@ html, body {
     text-align: left;
     font-size: 1rem;
     white-space: normal;
+}
+
+
+@media (max-width: 850px) {
+  /* Ajusta o hero em tablets */
+  .hero-content {
+    max-width: 90%;
+    padding: 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.4rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  /* Ajusta o modal para telas pequenas */
+  .modal-content,
+  .horizontal-modal {
+    width: 95%;
+    max-height: 85vh;
+    padding: 15px;
+  }
+
+  /* Evita imagem muito grande */
+  .modal-imagem {
+    max-height: 180px;
+    margin-bottom: 15px;
+  }
+
+  /* Texto mais proporcional */
+  .modal-content h2,
+  .horizontal-modal h2 {
+    font-size: 1.2rem;
+  }
+
+  .info-nutricional-titulo {
+    font-size: 1rem;
+  }
+
+  .info-nutricional {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  /* Cards no popup ficam mais compactos */
+  .popup-card {
+    width: 90%;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 400px) {
+  /* Modal ocupa quase toda a tela */
+  .modal-content,
+  .horizontal-modal {
+    width: 98%;
+    max-height: 90vh;
+    padding: 10px;
+  }
+
+  /* Evita estouro vertical */
+  .modal-imagem {
+    max-height: 150px;
+  }
+
+  .modal-content h2,
+  .horizontal-modal h2 {
+    font-size: 1rem;
+  }
+
+  .modal-content p {
+    font-size: 0.9rem;
+  }
+
+  .info-nutricional-titulo {
+    font-size: 0.9rem;
+  }
+
+  .info-nutricional {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+
+  /* Botão de fechar maior para toque */
+  .close {
+    font-size: 22px;
+    top: 8px;
+    right: 10px;
+  }
+
+  /* Popup cards ainda mais fluidos */
+  .popup-card {
+    width: 95%;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .popup-content {
+    width: 85%;
+    padding: 20px;
+  }
+
+  .popup {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .popup-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .popup-close {
+    font-size: 26px;
+    top: 5px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cardapio-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardapio-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (orientation: portrait) {
+  .modal-imagem {
+    max-height: 55vw;
+  }
 }
