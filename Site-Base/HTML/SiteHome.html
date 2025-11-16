@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCM Tancredo de Almeida Neves</title>
+  <link rel="stylesheet" href="../CSS/SiteHome.css">
+  <script defer src="../JS/SiteHome.js"></script>
+
+  <meta name="description" content="O cardápio do dia a dia dos alunos do CCM Tancredo de Almeida Neves, informações e eventos">
+  <meta property="og:title" content="O cardápio dos alunos do CCM">
+  <meta property="og:description" content="Veja qual será o próximo prato servido no CCM Tancredo de Almeida Neves, junto com informações de eventos escolares!">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="../IMAGENS/colegio-estadual-civico-militar-tancredo-de-almeida-neves.png" type="image/x-icon">
+</head>
+
+<body class="fade-in">
+  <div id="mensagemBoasVindas" class="mensagem fade-in" aria-live="polite"></div>
+
+  <header class="header fade-in" role="banner">
+    <nav class="header-content" role="navigation" aria-label="Menu principal">
+      <div class="nav-links" role="menubar">
+        <a href="#inicio" class="nav-link" role="menuitem">INÍCIO</a>
+        <a href="#cardapio" class="nav-link" role="menuitem">CARDÁPIO</a>
+        <a href="#eventos" class="nav-link" role="menuitem">EVENTOS</a>
+      </div>
+
+      <div class="perfil-container" aria-haspopup="true" aria-owns="perfil-dropdown">
+        <button class="perfil-icon" id="perfilIcon" aria-expanded="false" aria-controls="perfil-dropdown" title="Perfil">
+          <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Perfil" width="22" height="22">
+        </button>
+
+        <div class="dropdown" id="perfil-dropdown" role="menu" aria-hidden="true">
+          <h3 id="nomeUsuario">Usuário</h3>
+          <div id="encerrarSessao" role="menuitem" tabindex="0">Encerrar Sessão</div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero-section fade-in">
+    <div class="hero-content centralizado">
+      <div class="hero-text">
+        <h1 class="hero-title">CCM Tancredo de Almeida Neves</h1>
+        <div class="title-underline"></div>
+        <p class="hero-description">
+          Venha e explore o nosso site para saber o cardápio semanal da escola e informações importantes como datas e eventos!
+        </p>
+        <div class="botao-cardapio">
+          <a href="cardapio.html" class="Cardapio-link">Ver Cardápio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-mencoes fade-in">
+    <div class="coluna">
+      <h3 class="titulo-coluna">Desenvolvido por</h3>
+      <div class="linha-horizontal-mencoes"></div>
+      <p class="texto-coluna">2°DS</p>
+    </div>
+
+    <div class="coluna">
+      <h3 class="titulo-coluna">Redes Sociais</h3>
+      <div class="linha-horizontal"></div>
+      <a href="https://www.instagram.com/2ds.tancredo?igsh=MWUzejhiY2RncGk0eQ==" target="_blank" class="instagram-link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm8 2a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1a.75.75 0 0 1 .75-.75Zm-4 2.25A4.75 4.75 0 1 1 7 12.5a4.75 4.75 0 0 1 4.75-4.75Zm0 1.5A3.25 3.25 0 1 0 15.25 12.5 3.25 3.25 0 0 0 11.75 9.25Z"/>
+        </svg>
+        Instagram
+      </a>
+    </div>
+  </section>
+</body>
+</html>
